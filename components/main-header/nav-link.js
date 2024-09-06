@@ -6,7 +6,7 @@ import classes from "./nav-link.module.css";
 
 export default function NavLink({ href, children }) {
     const path = usePathname();
-    <Link href={href} className={path.startsWith(href) ? classes.active : undefined }>
+    return <Link href={href} className={`${classes.link} ${path.startsWith(href) ? classes.active : undefined }`}>
         { children }
     </Link>
 }
